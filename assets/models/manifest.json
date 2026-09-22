@@ -1,0 +1,349 @@
+{
+  "assets": [
+    {
+      "id": "space-robot",
+      "name": "Space robot",
+      "conditionType": "image",
+      "assetId": "cf84adf58b89e1960e95172eee53fe91474db8b52581ee772612147ecf3d2d67",
+      "selectionIndex": 29,
+      "prompt": "",
+      "src": "assets/models/space-robot.glb",
+      "poster": "assets/images/models/space-robot-poster.webp",
+      "input": "assets/images/models/space-robot-input.webp",
+      "glbBytes": 1549940,
+      "sha256": "8fffac651e33ea898b6047765b5b34ef81684500cd7034c5b37b73b48e09fede",
+      "triangles": 15266,
+      "vertices": 11793,
+      "bounds": {
+        "min": [
+          -0.23599092662334442,
+          -0.5003431439399719,
+          -0.16598068177700043
+        ],
+        "max": [
+          0.2361401468515396,
+          0.49975791573524475,
+          0.1513981968164444
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "classic-coupe",
+      "name": "Classic coupe",
+      "conditionType": "image",
+      "assetId": "cf72cb57a51e836494e0b67b0fd599dae08a183074dfbe44dc7a223e81381f06",
+      "selectionIndex": 37,
+      "prompt": "",
+      "src": "assets/models/classic-coupe.glb",
+      "poster": "assets/images/models/classic-coupe-poster.webp",
+      "input": "assets/images/models/classic-coupe-input.webp",
+      "glbBytes": 1452992,
+      "sha256": "a5a5388603cdc094437c1725e6e4729292f9e8bc136802b58a49255c71224ec5",
+      "triangles": 19798,
+      "vertices": 13547,
+      "bounds": {
+        "min": [
+          -0.23436829447746277,
+          -0.16046176850795746,
+          -0.4981347918510437
+        ],
+        "max": [
+          0.23437437415122986,
+          0.14551879465579987,
+          0.5005882978439331
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "low-poly-fox",
+      "name": "Low-poly fox",
+      "conditionType": "text",
+      "assetId": "d694acfdb9be809cf33abcde95a8f3dff19e9636c595fab3ded3debe39fbb249",
+      "selectionIndex": 55,
+      "prompt": "A low-poly, geometric representation of a quadrupedal animal, likely a fox or wolf, characterized by a streamlined body with distinct head, torso, limbs, and tail. The form is composed of numerous flat polygonal facets that define its angular silhouette. It features four slender legs supporting a long, tapered torso that transitions into a prominent, bushy tail. The head is elongated with pointed ears and a snout, while the overall posture suggests a standing or walking stance.",
+      "src": "assets/models/low-poly-fox.glb",
+      "poster": "assets/images/models/low-poly-fox-poster.webp",
+      "input": null,
+      "glbBytes": 1241492,
+      "sha256": "d8ccda9eb3a1a8a5e67229c284b878e3c98da221846a033cb17c5c900ce45378",
+      "triangles": 9651,
+      "vertices": 6954,
+      "bounds": {
+        "min": [
+          -0.07934931665658951,
+          -0.2577511668205261,
+          -0.5003741383552551
+        ],
+        "max": [
+          0.07964497804641724,
+          0.2524509131908417,
+          0.5014099478721619
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "dolphin",
+      "name": "Dolphin",
+      "conditionType": "text",
+      "assetId": "4d4a7a1b2bb740b13c3da0b0d7187f63b80513c0e5564c7b5d19a13a93172019",
+      "selectionIndex": 50,
+      "prompt": "A low-poly dolphin model featuring a streamlined, elongated body with distinct geometric facets. It has a prominent dorsal fin positioned mid-back, pectoral fins extending from the sides, and a fluke at the rear for propulsion. The head tapers to a pointed snout, and the overall form is compact yet aerodynamic, designed to mimic the natural silhouette of a leaping dolphin.",
+      "src": "assets/models/dolphin.glb",
+      "poster": "assets/images/models/dolphin-poster.webp",
+      "input": null,
+      "glbBytes": 1213224,
+      "sha256": "5e77b90b371306a6372fd8a885ee17b1c0d972e90ffffbab6c28ccc9a3e6629c",
+      "triangles": 6284,
+      "vertices": 4436,
+      "bounds": {
+        "min": [
+          -0.25445622205734253,
+          -0.1748342216014862,
+          -0.4996204078197479
+        ],
+        "max": [
+          0.2530405521392822,
+          0.15503765642642975,
+          0.4814952313899994
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "panda-character",
+      "name": "Panda character",
+      "conditionType": "text",
+      "assetId": "cadb829f9365ff026212a71728709e8226fdfecd40c14da9d8712fd0aa9bc410",
+      "selectionIndex": 49,
+      "prompt": "A low-poly, bipedal character model resembling an anthropomorphic bear or panda. It features a large, rounded head with prominent ears and a small snout. The torso is stout and upright, leading to four limbs\u2014two arms and two legs\u2014that end in simple, blocky feet with visible toes. The overall form is chunky and stylized, with a distinct separation between the head, body, and limbs.",
+      "src": "assets/models/panda-character.glb",
+      "poster": "assets/images/models/panda-character-poster.webp",
+      "input": null,
+      "glbBytes": 1427744,
+      "sha256": "48de54a185faa7fac755ffcb159d2f5429793b4e0a601ef9b3cacd212fabb799",
+      "triangles": 16522,
+      "vertices": 10832,
+      "bounds": {
+        "min": [
+          -0.32644084095954895,
+          -0.5006988644599915,
+          -0.21247413754463196
+        ],
+        "max": [
+          0.3271608352661133,
+          0.5006080865859985,
+          0.20770692825317383
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "running-shoe",
+      "name": "Running shoe",
+      "conditionType": "image",
+      "src": "assets/models/running-shoe.glb",
+      "poster": "assets/images/models/running-shoe-poster.webp",
+      "prompt": "",
+      "assetId": "a1674c3cc728fcd884e9b98ecfc3b2cb7a2954dc64d94ad84203b56079bf724d",
+      "input": "assets/images/models/running-shoe-input.webp",
+      "selectionIndex": 27,
+      "glbBytes": 1678752,
+      "sha256": "48fbc3e9409c17a4799a79e52b5d531db2799a0ee359ce6209933eeda4b75afc",
+      "triangles": 24694,
+      "vertices": 16667,
+      "bounds": {
+        "min": [
+          -0.18230745196342468,
+          -0.24500669538974762,
+          -0.49989983439445496
+        ],
+        "max": [
+          0.1690187305212021,
+          0.23506729304790497,
+          0.4900148808956146
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "portable-radio",
+      "name": "Portable radio",
+      "conditionType": "image",
+      "src": "assets/models/portable-radio.glb",
+      "poster": "assets/images/models/portable-radio-poster.webp",
+      "prompt": "",
+      "assetId": "bba1fc053ea7b6a1a41a6176488e6859f261b12d9e2916c59c37b4d8c9d45bf6",
+      "input": "assets/images/models/portable-radio-input.webp",
+      "selectionIndex": 34,
+      "glbBytes": 1380120,
+      "sha256": "3894747c670437847fbb4f1b03295cb545412c0b9734a41c24001811708570f7",
+      "triangles": 27096,
+      "vertices": 14800,
+      "bounds": {
+        "min": [
+          -0.5005285739898682,
+          -0.38578087091445923,
+          -0.13932958245277405
+        ],
+        "max": [
+          0.5002752542495728,
+          0.3870886564254761,
+          0.13988150656223297
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "wooden-chair",
+      "name": "Wooden chair",
+      "conditionType": "text",
+      "src": "assets/models/wooden-chair.glb",
+      "poster": "assets/images/models/wooden-chair-poster.webp",
+      "prompt": "A wooden chair featuring a rectangular seat with rounded corners, supported by four straight legs. The backrest consists of a curved top rail connected to vertical spindles that extend down to the seat. The design is simple and functional, with clean lines and minimal ornamentation. The chair's proportions are balanced, with the backrest slightly taller than the seat depth.",
+      "assetId": "bcf131b9e15f0ad164df036ad4ed2f9c3b4bec85cf064beb6e2eceb873d28393",
+      "selectionIndex": 0,
+      "glbBytes": 1469000,
+      "sha256": "a2b0030afcece39f9bd910050e93603fd0a04e1d4ec651c9471912ddc71dfa51",
+      "triangles": 12931,
+      "vertices": 9284,
+      "bounds": {
+        "min": [
+          -0.2382870465517044,
+          -0.501273512840271,
+          -0.28347355127334595
+        ],
+        "max": [
+          0.24129357933998108,
+          0.5002827048301697,
+          0.295328289270401
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "block-hammer",
+      "name": "Block hammer",
+      "conditionType": "text",
+      "src": "assets/models/block-hammer.glb",
+      "poster": "assets/images/models/block-hammer-poster.webp",
+      "prompt": "A large, blocky hammer head with a rectangular prism shape, featuring rounded edges and corners. The top surface is flat with a circular indentation at the center. Intricate patterns are carved into the sides of the head. A cylindrical handle extends downward from the head, tapering slightly towards the bottom. A looped ring is attached to the end of the handle. The overall structure is symmetrical along its vertical axis.",
+      "assetId": "5e89fa2dea17d27150aa9a5e1b08150c6c12f4ae79e7673fe13d0bbf174c9176",
+      "selectionIndex": 2,
+      "glbBytes": 1324708,
+      "sha256": "542e55de75c3ef835df7625accc9378a63941884b3631af7b07b06ebbca65767",
+      "triangles": 10670,
+      "vertices": 6972,
+      "bounds": {
+        "min": [
+          -0.23982807993888855,
+          -0.5003036260604858,
+          -0.1440179944038391
+        ],
+        "max": [
+          0.238927960395813,
+          0.499026358127594,
+          0.1444425880908966
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "acoustic-guitar",
+      "name": "Acoustic guitar",
+      "conditionType": "text",
+      "src": "assets/models/acoustic-guitar.glb",
+      "poster": "assets/images/models/acoustic-guitar-poster.webp",
+      "prompt": "A six-string acoustic guitar featuring a classic hourglass-shaped body with a rounded lower bout and a narrower waist. The neck extends upwards to a headstock equipped with six tuning pegs arranged in three pairs. The fretboard is marked with position dots, leading to the soundhole at the center of the body. The bridge anchors the strings across the lower portion of the guitar's face.",
+      "assetId": "caf966eea1956259b54a64bc8cdd0f78e096221664baf96f715ee14e8216a6a2",
+      "selectionIndex": 25,
+      "glbBytes": 1216848,
+      "sha256": "ccd23d1a38ee18327c72f13ffa2bfd0c80feb6da0d70f8100211ef38ee1ca537",
+      "triangles": 6183,
+      "vertices": 4469,
+      "bounds": {
+        "min": [
+          -0.18407534062862396,
+          -0.499666303396225,
+          -0.04380284622311592
+        ],
+        "max": [
+          0.18369676172733307,
+          0.4880788028240204,
+          0.052034731954336166
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "top-hat",
+      "name": "Top hat",
+      "conditionType": "image",
+      "src": "assets/models/top-hat.glb",
+      "poster": "assets/images/models/top-hat-poster.webp",
+      "prompt": "",
+      "assetId": "b5c89cc8b80fea3f1b2deed62a0fa80310ff5e97ae4e5068d8f916d3ec57b9d6",
+      "input": "assets/images/models/top-hat-input.webp",
+      "selectionIndex": 11,
+      "glbBytes": 1912956,
+      "sha256": "274720fed00992546959986fe3179586b4ac5f11cb49ad7744a4cf17c1309603",
+      "triangles": 41624,
+      "vertices": 27501,
+      "bounds": {
+        "min": [
+          -0.4971171021461487,
+          -0.2772294878959656,
+          -0.4982132017612457
+        ],
+        "max": [
+          0.4976416230201721,
+          0.2707165777683258,
+          0.49655336141586304
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    },
+    {
+      "id": "spray-can",
+      "name": "Spray can",
+      "conditionType": "image",
+      "src": "assets/models/spray-can.glb",
+      "poster": "assets/images/models/spray-can-poster.webp",
+      "prompt": "",
+      "assetId": "445ce1025b47ed44e61c341efa82b1ef63550040efab8f9fbc6a3e371d763feb",
+      "input": "assets/images/models/spray-can-input.webp",
+      "selectionIndex": 44,
+      "glbBytes": 1631224,
+      "sha256": "645f93ac2864536ed38eb96af8601aa271d1e8576fc5c578e43458746559d075",
+      "triangles": 22952,
+      "vertices": 15259,
+      "bounds": {
+        "min": [
+          -0.21036095917224884,
+          -0.5003232955932617,
+          -0.2084382325410843
+        ],
+        "max": [
+          0.20819228887557983,
+          0.4859517216682434,
+          0.2095285952091217
+        ]
+      },
+      "upAxis": "Y",
+      "processing": "GLB copied byte-for-byte. Existing PNG renders resized to WebP; alpha preserved."
+    }
+  ]
+}

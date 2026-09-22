@@ -1,0 +1,112 @@
+{
+  "description": "Three sequential source-GLB octree visualizations with phase captions.",
+  "provenance": "Illustrative replay built from existing GLBs, not a model-inference recording. Completion restores the source surface octree; the final surface is the original GLB.",
+  "timing_source": "scripts/visualization/build_octree_animation.py on the research branch",
+  "fps": 24,
+  "frames": 1440,
+  "duration_seconds": 60.0,
+  "width": 1920,
+  "height": 1080,
+  "order": [
+    "robot",
+    "airplane",
+    "truck"
+  ],
+  "sources": [
+    {
+      "asset": "robot",
+      "source_glb": "assets/examples/understanding/robot.glb",
+      "input": "outputs/octllm_animation/robot/frames/frame_%04d.png",
+      "format": "lossless PNG sequence",
+      "scene_sha256": "1ded8c4eef3c37691a070bbb9d067418d21ac4f90a7230110622e6a62132dcd6"
+    },
+    {
+      "asset": "airplane",
+      "source_glb": "assets/examples/understanding/airplane.glb",
+      "input": "outputs/octllm_animation/airplane/frames/frame_%04d.png",
+      "format": "lossless PNG sequence",
+      "scene_sha256": "84ae18a80688a0490a8e4e79aac652d6df67d9b2dd59869973e960873e02dcf6"
+    },
+    {
+      "asset": "truck",
+      "source_glb": "assets/examples/understanding/truck.glb",
+      "input": "outputs/octllm_animation/truck/frames/frame_%04d.png",
+      "format": "lossless PNG sequence",
+      "scene_sha256": "e60f4c92e643a52e1abd2c1644e9979743435b9581bfd1fce25e4ff30d0348a5"
+    }
+  ],
+  "phase_timing": [
+    {
+      "label": "Depth 3 generating",
+      "source_frame_start": 22,
+      "source_frame_end_inclusive": 97,
+      "clip_seconds_start": 0.875,
+      "clip_seconds_end": 4.041666666666667
+    },
+    {
+      "label": "Depth 4 generating",
+      "source_frame_start": 98,
+      "source_frame_end_inclusive": 173,
+      "clip_seconds_start": 4.041666666666667,
+      "clip_seconds_end": 7.208333333333333
+    },
+    {
+      "label": "Depth 5 generating",
+      "source_frame_start": 174,
+      "source_frame_end_inclusive": 251,
+      "clip_seconds_start": 7.208333333333333,
+      "clip_seconds_end": 10.458333333333334
+    },
+    {
+      "label": "Depth 6 generating",
+      "source_frame_start": 252,
+      "source_frame_end_inclusive": 329,
+      "clip_seconds_start": 10.458333333333334,
+      "clip_seconds_end": 13.708333333333334
+    },
+    {
+      "label": "Voxel completing",
+      "source_frame_start": 330,
+      "source_frame_end_inclusive": 381,
+      "clip_seconds_start": 13.708333333333334,
+      "clip_seconds_end": 15.875
+    },
+    {
+      "label": "Surface reveal",
+      "source_frame_start": 382,
+      "source_frame_end_inclusive": 424,
+      "clip_seconds_start": 15.875,
+      "clip_seconds_end": 17.666666666666668
+    },
+    {
+      "label": "Final asset",
+      "source_frame_start": 425,
+      "source_frame_end_inclusive": 480,
+      "clip_seconds_start": 17.666666666666668,
+      "clip_seconds_end": 20.0
+    }
+  ],
+  "clip_seconds_start": [
+    0,
+    20,
+    40
+  ],
+  "caption_font": "DejaVuSans.ttf",
+  "caption_font_pixels": 50,
+  "caption_font_sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+  "caption_alignment": "top center",
+  "caption_anchor_pixels": {
+    "x": 960.0,
+    "y": 64
+  },
+  "caption_text_anchor": "mt",
+  "poster_frame_zero_based": 287,
+  "verification": {
+    "generation.mp4": {
+      "full_decode_passed": true,
+      "decoded_frames": 1440,
+      "bytes": 15961702,
+      "sha256": "d78e6f6e4e793c49cd6a0023909d8459e1d28806cf33d4e05895226c54a715c6"
+    }
+  }
+}

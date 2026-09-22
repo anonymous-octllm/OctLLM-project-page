@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfcfa">
+  <meta name="description" content="OctLLM: Octrees as an Explicit 3D Language. Unified 3D generation and understanding with sparse octree occupancy tokens.">
+  <meta property="og:title" content="OctLLM — Octrees as an Explicit 3D Language">
+  <meta property="og:description" content="3D generation and understanding through an explicit octree language.">
+  <meta property="og:type" content="website">
+  <title>OctLLM — Octrees as an Explicit 3D Language</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <script src="release-config.js" defer></script>
+  <script src="gallery-data.js?v=2" defer></script>
+  <script src="model-data.js?v=2" defer></script>
+  <script src="script.js?v=11" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <h1 id="hero-title">Octrees as an<br><em>Explicit 3D Language</em></h1>
+      <p class="wordmark">OctLLM<span class="wordmark-dot" aria-hidden="true">.</span></p>
+      <div class="authors" aria-label="Authors"><span>Anonymous Authors</span></div>
+      <p class="affiliation">Paper under double-blind review</p>
+      <div class="resource-buttons" aria-label="Research resources">
+        <a class="resource-button" data-resource="paper" href="paper/iclr2027_conference.pdf" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+        <a class="resource-button" data-resource="code" hidden>Code <span aria-hidden="true">↗</span></a>
+        <a class="resource-button" data-resource="model" hidden>Models <span aria-hidden="true">↗</span></a>
+      </div>
+      <nav class="paper-nav" aria-label="Page sections"><a href="#overview">Abstract</a><a href="#generation">3D Gallery</a><a href="#process">Generation</a><a href="#method">Method</a><a href="#understanding">Understanding</a></nav>
+      <figure class="studio">
+        <div class="studio-screen">
+          <video id="studio-video" class="ambient-video" width="1280" height="512" muted loop playsinline preload="none" poster="assets/images/studio-poster.webp" aria-label="OctLLM generated objects, descriptions, and sparse octrees"><source data-src="assets/videos/studio.webm" type="video/webm"><source data-src="assets/videos/studio.mp4" type="video/mp4"></video>
+          <button class="video-toggle" data-video="studio-video" aria-label="Play overview animation"><span class="toggle-icon" aria-hidden="true">▶</span><span class="toggle-label">Play</span></button>
+        </div>
+      </figure>
+    </section>
+
+    <section class="overview wrap section" id="overview" aria-labelledby="overview-title">
+      <h2 id="overview-title">Abstract</h2>
+      <p class="abstract-copy">Existing 3D large language models (LLMs) compromise on two fronts: they compress shapes into latent codebook indices or coordinate text, which removes spatial structure from what the model observes, and they acquire the 3D modality by fine-tuning the backbone, which overwrites its general language ability. We present OctLLM, which addresses both limitations. Geometry enters as an explicit 3D sequence of octree occupancy tokens. To limit rapid sequence growth with depth, OctLLM randomly empties penultimate-level nodes and omits descendants while preserving shape, producing a shorter coordinate- and depth-anchored <em>Sparse Octree</em> (S-Octree) for generation under position-aware mask modeling and 3D understanding. On the other front, existing methods introduce a new modality with full fine-tuning or LoRA, but full fine-tuning is costly, LoRA limits 3D capacity, and both modify the language pathway. OctLLM instead adds 3D capacity in parameters separate from the pretrained ones: mesh tokens are routed through independent trainable branches in a subset of blocks while text and image tokens retain the frozen vision-language pathway, and the two streams interact through shared self-attention. It trains far fewer parameters than full fine-tuning, yet sets a new state of the art among unified multimodal LLMs, lowering image-to-3D FID by <strong>17.4%</strong> and raising render-grounded captioning by <strong>28.7 points</strong> over ShapeLLM-Omni, while matching the backbone on general language benchmarks.</p>
+    </section>
+
+    <section class="generation section" id="generation" aria-labelledby="generation-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="generation-title">Explore in 3D.</h2></div>
+        <div class="gallery-toolbar">
+          <div class="segmented" role="tablist" aria-label="Generation condition"><button id="image-tab" role="tab" aria-selected="true" aria-controls="gallery-panel" data-gallery="image">Image to 3D</button><button id="text-tab" role="tab" aria-selected="false" aria-controls="gallery-panel" tabindex="-1" data-gallery="text">Text to 3D</button></div>
+          <p class="interaction-hint">Drag to rotate · Scroll to zoom</p>
+        </div>
+        <div id="gallery-panel" role="tabpanel" aria-labelledby="image-tab">
+          <div class="model-layout">
+            <div class="model-stage" id="model-stage">
+              <model-viewer id="asset-viewer" camera-controls touch-action="pan-y" disable-pan disable-tap interaction-prompt="none" loading="eager" reveal="auto" shadow-intensity="0.7" shadow-softness="1" exposure="1.1" camera-orbit="30deg 75deg 105%" min-camera-orbit="auto 5deg 35%" max-camera-orbit="auto 175deg 250%" field-of-view="30deg" aria-label="Interactive generated 3D model">
+                <div class="viewer-poster" slot="poster"><img id="model-poster" alt=""><p id="model-status" role="status">Loading 3D model…</p><button id="retry-model" type="button" hidden>Try again</button></div>
+                <div class="model-progress" slot="progress-bar"><span id="model-progress-fill"></span></div>
+              </model-viewer>
+              <div class="viewer-controls"><button id="reset-view" type="button" aria-label="Reset camera" title="Reset camera">↺</button><button id="fullscreen-model" type="button" aria-label="Expand 3D viewer" title="Expand 3D viewer">⛶</button></div>
+            </div>
+            <aside class="model-info" aria-live="polite"><h3 id="model-name"></h3><div id="model-condition"></div><a id="download-model" class="text-link" download>Download GLB <span aria-hidden="true">↓</span></a></aside>
+          </div>
+          <div id="model-picker" class="model-picker" aria-label="Choose a generated object"></div>
+        </div>
+        <noscript><p>Enable JavaScript to explore the 3D models. <a href="assets/images/image-gallery.webp">View generation results</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="process section" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="process-title">From coarse to complete.</h2></div>
+        <div class="film-tabs segmented" role="tablist" aria-label="Process videos">
+          <button type="button" role="tab" id="generation-tab" aria-selected="true" aria-controls="generation-panel" data-film="0">Generation</button>
+          <button type="button" role="tab" id="interaction-tab" aria-selected="false" aria-controls="interaction-panel" tabindex="-1" data-film="1">Interaction</button>
+        </div>
+      </div>
+      <figure class="film-pager" data-index="0">
+        <div class="film-stage">
+          <button type="button" class="film-turn" data-dir="-1" aria-label="Previous video" inert>‹</button>
+          <div class="film-viewport">
+            <div class="film-track">
+              <div class="film-page is-active" id="generation-panel" role="tabpanel" aria-labelledby="generation-tab" data-caption="OctLLM builds a 6-level octree layer by layer, completes it with a 3D U-Net, and decodes the final mesh with a flow-based decoder.">
+                <video id="generation-video" class="process-video" width="1920" height="1080" controls muted loop playsinline preload="none" poster="assets/images/generation-poster.webp" aria-label="Robot, airplane, and truck: octree depths 3 to 6, voxel completion, and surface reveal"><source data-src="assets/videos/generation.mp4" type="video/mp4"></video>
+              </div>
+              <div class="film-page" id="interaction-panel" role="tabpanel" aria-labelledby="interaction-tab" data-caption="OctLLM supports image-to-3D, text-to-3D, and 3D understanding, while retaining language interaction." inert>
+                <video id="interaction-video" class="process-video" width="1920" height="1080" controls muted loop playsinline preload="none" poster="assets/images/interaction-poster.webp" aria-label="OctLLM chat: image-to-3D robot, text-to-3D fox, helicopter understanding, and a language reply"><source data-src="assets/videos/interaction.mp4" type="video/mp4"></video>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="film-turn" data-dir="1" aria-label="Next video">›</button>
+        </div>
+        <figcaption id="film-caption" aria-live="polite">OctLLM builds a 6-level octree layer by layer, completes it with a 3D U-Net, and decodes the final mesh with a flow-based decoder.</figcaption>
+      </figure>
+    </section>
+
+    <section class="method section wrap" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><h2 id="method-title">One 3D language.</h2><p>Generation and understanding through S-Octrees.</p></div>
+      <figure class="paper-figure"><button class="figure-zoom" data-figure="assets/images/method-overview.webp" data-title="OctLLM pipeline" aria-label="Enlarge the OctLLM pipeline figure"><img src="assets/images/method-overview.webp" width="2185" height="892" loading="lazy" alt="Text or image conditioning to S-Octree, 3D U-Net occupancy completion, and flow-based mesh decoding; S-Octree input to a natural-language description."></button></figure>
+      <div class="method-details">
+        <article><h3>Sparse octrees</h3><p>Occupancy tokens anchored to 3D coordinates and depth.</p></article>
+        <article><h3>Shared attention</h3><p>Trainable 3D branches alongside a frozen text-image pathway.</p></article>
+        <article><h3>Mesh reconstruction</h3><p>A 3D U-Net completes occupancy; a pretrained flow-based decoder produces the textured mesh.</p></article>
+      </div>
+    </section>
+
+    <section class="understanding section wrap" id="understanding" aria-labelledby="understanding-title">
+      <div class="section-heading"><h2 id="understanding-title">From shape to language.</h2><p>Excerpts from OctLLM’s descriptions.</p></div>
+      <div class="understanding-grid" id="understanding-examples"></div>
+    </section>
+    <section class="citation section wrap" id="citation" aria-labelledby="citation-title" hidden><h2 id="citation-title">Citation</h2><div class="citation-top"><span>BibTeX</span><button id="copy-citation" type="button">Copy</button></div><pre><code id="bibtex"></code></pre><p id="copy-status" aria-live="polite"></p></section>
+  </main>
+  <footer class="footer wrap"><span>OctLLM</span><a href="#top">Back to top ↑</a></footer>
+  <dialog id="figure-dialog" class="figure-dialog" aria-labelledby="figure-dialog-title"><button class="dialog-close" aria-label="Close figure">×</button><h2 id="figure-dialog-title"></h2><img id="figure-dialog-image" alt=""></dialog>
+</body>
+</html>
