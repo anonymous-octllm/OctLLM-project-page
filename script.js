@@ -405,6 +405,7 @@
       const url = new URL(release[key], location.href);
       if (!['http:', 'https:'].includes(url.protocol)) return;
       const link = document.querySelector(`[data-resource="${key}"]`);
+      if (!(link instanceof HTMLAnchorElement)) return;
       link.href = url.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
